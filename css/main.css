@@ -1,0 +1,463 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: monospace;
+    font-weight: 900;
+}
+
+
+/******************/
+/* REUSED STYLING */
+/******************/
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "a b c"; 
+}
+
+li {
+    display: inline;
+    padding: 0 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.pizza {
+    height: 58em;
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+
+.download {
+    justify-self: end;
+    transform: scale(0.6);
+    opacity: 0.3;
+    margin: 0 1.5em 0 0; 
+}
+
+.seasonalWrapper {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 1em;    
+    grid-template-areas: 
+        "a b b b b c c c c c c d"
+        "a e e e e e e e e e e d";
+}
+
+.upArrow {
+    grid-area: d;
+    transform: scale(.2);
+    opacity: 0.3;
+    margin: 0 -3em 1em 0;
+}
+
+.seasonalWrapper .download {
+    grid-area: d;
+    opacity: 0.2;
+    margin-right: 2em;
+}
+
+.seasonDishes .upArrow {
+    grid-area: d;
+    justify-self: end;
+    align-self: end;
+}
+
+.seasonDishes .download {
+    justify-self: end;
+    align-self: end;
+    margin-bottom: 5.75em;
+}
+
+
+/***************/
+/* CPK HEADER  */
+/***************/
+.header {
+    background-color: #ffffff;
+    position: relative;
+    z-index: 1; 
+}
+
+
+/* Yellow Header Bar */
+.headBar {
+    background-color: #ffdb00;
+    color: #ffffff;
+}
+
+.headBar p {
+    display: inline-block;
+    grid-area: b;
+    justify-self: center;
+    font-size: 1em;
+    padding: 6px;
+}
+    
+.headBar img {
+    width: 2.4em; 
+    grid-area: c;
+    align-self: center;
+    justify-self: end;
+    margin-right: .5em;
+} 
+
+
+/* Logo with Account Links */
+.logoCPK {
+    width: 275px;
+    grid-area: b; 
+    justify-self: center;
+    margin-top: 1.5em;
+}
+
+.logoNavBar {
+    grid-area: c;
+    justify-self: end;
+    font-size: 1em;
+    margin: 2em 2em 0 0;
+}
+
+.logoNavBar a {
+    color: #969698;
+}
+
+sup {
+    font-weight: bold;
+    padding: 0 5px 0 0;
+}
+
+
+/* User Restaurant Links */
+.navBar {
+    font-size: 1.7em;
+    text-align: center;
+    margin-top: 1.5em;
+}
+
+.navBar img {
+    height: 0.65em;
+    filter: brightness(60%);
+    margin: 0 -10px 0 20px; 
+}
+
+
+/* Border between Header and Body */
+.border {
+    width: 25em;
+    grid-area: b;
+    justify-self: center;
+    margin-top: 3em;
+    margin-bottom: -0.5em;;
+}
+
+
+/****************/
+/* CPK PIZZAS  */
+/***************/
+/* Chicken Pizza */
+.chx {
+    background-image: url(../images/HomePage1_1920.jpg);
+    color: #ffffff;
+    margin-top: -11.5em; 
+}
+
+.pizzaBlurb {
+    grid-area: c;
+    justify-self: start;
+    align-self: center;
+    margin: 22em 0 0 3.5em;
+}
+
+.pizzaBlurb img {
+    width: 2.5em;
+}
+
+.pizzaText {
+    display: inline-block;
+    font-size: 1.3em; 
+    margin-top: -200em;
+}
+
+.pizzaText p {
+    font-size: 1em;
+    font-weight: 550;
+}
+
+.arrow {
+    top: 39em;
+    left: 57em;
+    width: 5em;
+    background: url(../images/btn_30_sprites.png) -9em -10em;
+    background-repeat: no-repeat;
+    transform: scale(.5);
+    position: relative;
+    z-index: 1;
+}
+
+.chx .download {
+    grid-area: c;
+    align-self: end;
+    margin-bottom: -0.75em;
+}
+
+
+/* REWARDS AD */
+.rewards {
+    grid-area: a;
+    justify-self: center;
+    margin-top: -18em;
+    position: relative;
+    z-index: 1;
+}
+
+.rewards img {
+    transform: scale(.5);
+}
+
+.rewardText {
+    font-size: 1.5em;
+    text-align: right;
+    margin-top: -5em;
+    margin-right: 8em;
+} 
+
+.rewardText p {
+    color: #dbc39b;
+    font-size: 1em;
+}
+
+.rewardText button {
+    background-color: #1c100b;
+    color: #ffffff;
+    font-size: 2em;
+    font-weight: 550;
+    padding: 0.4em 1em;
+    margin-top: 1em;
+}
+
+
+/* Spinach Pizza */
+.spinach {
+    background-image: url(../images/HomePage2_1920.jpg); 
+    margin-top: -37em;
+    position: relative;
+    z-index: -1;
+}
+
+.spinach .download {
+    grid-area: c;
+    align-self: center;
+    margin-top: -5.75em;
+}
+
+
+/****************/
+/* CPK SEASONAL */
+/****************/
+/* Seasonal Header */
+.seasonalHeader {
+    font-size: 1.5em;
+    text-align: center; 
+    margin-top: 3em;
+}
+
+.seasonalHeader img {
+    transform: scale(0.75)
+}
+
+.seasonalHeader p {
+    color: #bcbcbc;
+}
+
+.headLinks .upArrow {
+    margin-top: -8em;
+}
+
+.headLinks .download {
+    margin-top: -1em;
+}
+
+
+/* Seasonal Drinks and Dishes */
+.iced {
+    margin-bottom: 15em;
+}
+
+.mintBev, 
+.chicken,
+.drinks {
+    background-size: cover;
+}
+
+.mintBev, 
+.chicken    {
+    height: 50em;
+    margin-top: -1em;
+}
+
+.mintBev {
+    grid-area: b;
+    background-image: url(../images/home_seasonal_1.jpg);    
+}
+
+.chicken {
+    grid-area: c;
+    background-image: url(../images/home_seasonal_2.jpg); 
+}
+
+.drinks {
+    grid-area: e;
+    height: 45em;
+    background-image: url(../images/home_seasonal_3.jpg); 
+    margin-top: 1em;
+}
+
+
+/**************/
+/* CPK FOOTER */
+/**************/
+/* CPK Company Info. Links */
+.footWrapper {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas: "b c d e f";
+    background-color: #faf9f9; 
+    color: #cccccc;
+    font-size: 1.5em;
+    padding: 2.5em 13em 2.5em 15em;
+}
+
+.footWrapper li {
+    display: block;
+    padding-right: 0.5em;
+}
+
+.footWrapper a {
+    color: #cccccc;
+    font-size: 0.7em;
+}
+
+.company {
+    grid-area: b;
+}
+
+.realEstate {
+    grid-area: c;
+}
+
+.careers {
+    grid-area: d;
+}
+
+.FAQs {
+    grid-area: e;
+}
+
+.links {
+    grid-area: f;
+}
+
+
+/* CPK Legal and External Links */
+.footer {
+    display: grid;
+    grid-template-columns: 40% 1% 16% 21% 1% 4% 4% 4% 4% 4%;
+    background-color: #2d2a26;
+    padding: 1em 25em;
+}
+
+.line {
+    border-left: 0.1em solid #ffffff;
+    height: 2.5em;
+    justify-self: start;
+    align-self: center;
+}
+
+.footer li {
+    padding: 0 0;
+}
+
+.footer a {
+    color: #ffffff;    
+}
+
+.group1 {
+    margin-left: 1em;
+}
+
+.textLinks,
+.apps   {
+    justify-self: center;
+    align-self: center;
+    font-size: 0.8em;
+}
+
+.appleApp,
+.googlePlay {
+    width: 7em;
+}
+
+.facebook,
+.google,
+.instagram,
+.pinterest,
+.twitter {
+    display: inline-block;
+    top: 10em;
+    left: 10em; 
+    height: 4.75em;
+    background-repeat: no-repeat;   
+    transform:scale(.5);
+}
+
+.facebook,
+.google,
+.instagram,
+.twitter {
+    width: 4.5em;
+}
+
+.facebook {    
+    background: url(../images/btn_30_sprites.png) -14em;
+}
+
+.google {
+    background: url(../images/btn_30_sprites.png) -18.5em;
+}
+
+.instagram {
+    background: url(../images/btn_30_sprites.png) -23em;
+}
+
+.pinterest {
+    width: 4.75em;
+    background: url(../images/btn_30_sprites.png) -27.5em;
+}
+
+.twitter {
+    background: url(../images/btn_30_sprites.png) -32.5em;
+}
+
+.foot {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);    
+    grid-template-areas: 
+        "a b b b b c c c c c c d";
+    height: 0em;
+    position: relative;
+    z-index: 1;
+}
+
+.foot .upArrow {
+    grid-area: d;
+    margin-top: -11em;
+}
+
+.foot .download {
+    grid-area: d;
+    margin-top: -4em;
+}
